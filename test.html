@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="siema">
+		<div><img src="img/439.JPG" alt=""></div>
+		<div><img src="img/96.JPG" alt=""></div>
+		<div><img src="img/497.JPG" alt=""></div>
+		<div><img src="img/582.JPG" alt=""></div>
+		<div><img src="img/601.JPG" alt=""></div>
+	</div>
+
+	<script src="siema.min.js"></script>
+	<script>
+		const mySiema = new Siema({
+  			duration: 250,
+  			loop: true,
+		});
+		setInterval(() => mySiema.next(), 2000);
+	</script>
+
+</body>
+</html>
