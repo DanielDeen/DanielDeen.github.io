@@ -16,12 +16,16 @@
 		<div><img src="fav16.png" alt=""></div>
 	</div>	
 
-	<button class="prev">prev button</button>>
-	<button class="next">next button</button>>
+	<button class="prev">prev button</button>
+	<button class="next">next button</button>
 
 	<script src="siema.min.js"></script>
 	<script>
-		const mySiema = new Siema();
+		const mySiema = new Siema(
+			duration: 600,
+			easing: 'cubic-bezier(.11,.73,.57,1.53)'
+
+		);
 		document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
 		document.querySelector('.next').addEventListener('click',() => mySiema.next());
 	</script>
