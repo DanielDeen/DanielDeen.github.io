@@ -31,11 +31,12 @@
 	<script src="siema.min.js"></script>
 	<script>
 		const mySiema = new Siema({
-			loop: true,
-			duration: 250,
+  			duration: 250,
+  			loop: true,
 		});
 
-		setInterval(() => mySiema.next(), 2000)
+		// listen for keydown event
+		setInterval(() => mySiema.next(), 1000)
 
 		// document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
 		// document.querySelector('.next').addEventListener('click',() => mySiema.next());
