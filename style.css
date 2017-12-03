@@ -8,10 +8,10 @@ img {
   width: 100%;
 }
 
-.siema1 .siema2 .siema3 {
+.siema {
   margin: 1rem 0;
 }
 
-.row1 {
+.row1 .row2 .row3{
   margin-top: 10px;
 }
