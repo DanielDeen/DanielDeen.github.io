@@ -22,7 +22,9 @@
 	<script src="siema.min.js"></script>
 	<script>
 		const mySiema = new Siema(
+			perPage: 2,
 			duration: 600,
+			easing: 'cubic-bezier(.11,.73,.57,1.53)'
 		);
 		document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
 		document.querySelector('.next').addEventListener('click',() => mySiema.next());
