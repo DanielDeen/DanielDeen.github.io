@@ -1,6 +1,5 @@
 body {
   width: 100%;
-  max-width: 30rem;
   margin: 0 auto;
 }
 
@@ -14,8 +13,4 @@ img {
 
 .row1 .row2 .row3{
   margin-top: 10px;
-}
-
-.bkg {
-	background: url(./img/IMG_3468.JPG)
 }
