@@ -16,8 +16,8 @@
 		<div><img src="fav16.png" alt=""></div>
 	</div>	
 
-	<button class="prev">prev button</button>
-	<button class="next">next button</button>
+	<!-- <button class="prev">prev button</button>
+	<button class="next">next button</button> -->
 
 	<script src="siema.min.js"></script>
 	<script>
@@ -27,10 +27,10 @@
 			easing: 'cubic-bezier(.11,.73,.57,1.53)'
 		});
 
-		setInterval(() => mySiema.next(), 1000)
+		setInterval(() => mySiema.next(), 2000)
 
-		document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
-		document.querySelector('.next').addEventListener('click',() => mySiema.next());
+		// document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+		// document.querySelector('.next').addEventListener('click',() => mySiema.next());
 
 	</script>
 
