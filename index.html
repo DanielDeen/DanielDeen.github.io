@@ -65,7 +65,7 @@
     }
 
     function distanceDays() {
-        var day1 = today();
+        var day1 = Date.parse(today());
         var day2 = Date.parse("2017-08-28");
         var distance = Math.abs(day1 - day2);
         //毫秒数除以一天的毫秒数,就得到了天数
