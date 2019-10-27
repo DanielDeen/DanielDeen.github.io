@@ -2,49 +2,79 @@
 
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>爱你，My Dear</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<embed src="copy.mp3" autostart=true loop="true"  starttime="00:19" hidden="true" type="audio/mp3">
-	<!-- <bgsound src="http://sc1.111ttt.com/2016/1/11/30/204300926446.mp3" loop="-1"> -->
+    <meta charset="utf-8"/>
+    <title>爱你，My Dear</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <embed src="copy.mp3" autostart=true loop="true" starttime="00:19" hidden="true" type="audio/mp3">
+    <!-- <bgsound src="http://sc1.111ttt.com/2016/1/11/30/204300926446.mp3" loop="-1"> -->
 </head>
 <body>
-	<!-- <embed src="copy.mp3" hidden="true" ></embed> -->
-	<h3>2017.8.28 至今，我和你在一起已经100天了</h3>
-	<div class="row1"><img src="img/IMG_3468.JPG"></div>
-	<h3>之前的日子，只有你一个人。。。</h3>
-	<h3>我希望以后的路，我们一起走，爱你😍</h3>
-	<div class="siema">
-		<div><img src="img/IMG_3076.JPG" alt=""></div>
-		<div><img src="img/2594.jpg" alt=""></div>
-		<div><img src="img/IMG_3059.JPG" alt=""></div>
-		<div><img src="img/2578.jpg" alt=""></div>
-		<div><img src="img/2586.jpg" alt=""></div>
-		<div><img src="img/3064.jpg" alt=""></div>
-		<div><img src="img/3067.jpg" alt=""></div>
-		<div><img src="img/2595.jpg" alt=""></div>
-		<div><img src="img/2599.jpg" alt=""></div>
-		<div><img src="img/3072.jpg" alt=""></div>
-		<div><img src="img/IMG_3075.JPG" alt=""></div>
-		<div><img src="img/IMG_3074.JPG" alt=""></div>
-	</div>
-	<!-- <button class="prev">prev button</button>
-	<button class="next">next button</button> -->
-	<script src="siema.min.js"></script>
-	<script>
-		const mySiema = new Siema({
-			selector: '.siema',
-  			duration: 250,
-  			loop: true,
-		});
+<!-- <embed src="copy.mp3" hidden="true" ></embed> -->
+<h3>2017.8.28 至今，我和你在一起已经<div id="days"></div>>天了</h3>
+<div class="row1"><img src="img/IMG_3468.JPG"></div>
+<h3>之前的日子，只有你一个人。。。</h3>
+<h3>我希望以后的路，我们一起走，爱你😍</h3>
+<div class="siema">
+    <div><img src="img/IMG_3076.JPG" alt=""></div>
+    <div><img src="img/2594.jpg" alt=""></div>
+    <div><img src="img/IMG_3059.JPG" alt=""></div>
+    <div><img src="img/2578.jpg" alt=""></div>
+    <div><img src="img/2586.jpg" alt=""></div>
+    <div><img src="img/3064.jpg" alt=""></div>
+    <div><img src="img/3067.jpg" alt=""></div>
+    <div><img src="img/2595.jpg" alt=""></div>
+    <div><img src="img/2599.jpg" alt=""></div>
+    <div><img src="img/3072.jpg" alt=""></div>
+    <div><img src="img/IMG_3075.JPG" alt=""></div>
+    <div><img src="img/IMG_3074.JPG" alt=""></div>
+</div>
+<!-- <button class="prev">prev button</button>
+<button class="next">next button</button> -->
+<script src="siema.min.js"></script>
+<script>
+    const mySiema = new Siema({
+        selector: '.siema',
+        duration: 250,
+        loop: true,
+    });
 
-		// listen for keydown event
-		setInterval(() => mySiema.next(), 2000);
+    // listen for keydown event
+    setInterval(() => mySiema.next(), 2000);
 
-		// document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
-		// document.querySelector('.next').addEventListener('click',() => mySiema.next());
+    // document.querySelector('.prev').addEventListener('click',() => mySiema.prev());
+    // document.querySelector('.next').addEventListener('click',() => mySiema.next());
 
-	</script>
+</script>
+
+<script>
+    function today() {
+        var today = new Date();
+        var str = "";
+        str += today.getFullYear() + "-";
+        var month = today.getMonth() + 1;//返回值是 0（一月） 到 11（十二月） 之间的一个整数。
+        if (month < 10) {
+            str += "0";
+        }
+        str += month + "-";
+        var day = today.getDate();//返回值是 1 ~ 31 之间的一个整数
+        if (day < 10) {
+            str += "0";
+        }
+        str += day;
+        return str
+    }
+
+    function distanceDays() {
+        var day1 = today();
+        var day2 = Date.parse("2017-08-28");
+        var distance = Math.abs(day1 - day2);
+        //毫秒数除以一天的毫秒数,就得到了天数
+        var days = Math.floor(distance / (24 * 3600 * 1000));
+        return days;
+    }
+
+    document.getElementById('days').innerHTML =distanceDays();
+</script>
 
 </body>
 </html>
