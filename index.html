@@ -10,7 +10,7 @@
 </head>
 <body>
 <!-- <embed src="copy.mp3" hidden="true" ></embed> -->
-<h3>2017.8.28 至今，你和我在一起已经<p id="days"></p>天了</h3>
+<h3>2017.8.28 至今，你和我在一起已经<div id="days"></div>天了</h3>
 <div class="row1"><img src="img/IMG_3468.JPG"></div>
 <h3>之前的日子，只有你一个人。。。</h3>
 <h3>我希望以后的路，我们一起走，爱你😍</h3>
@@ -66,7 +66,7 @@
 
     function distanceDays() {
         var day1 = Date.parse(today());
-        var day2 = Date.parse("2017-08-28");
+        var day2 = Date.parse("2017-08-27");
         var distance = Math.abs(day1 - day2);
         //毫秒数除以一天的毫秒数,就得到了天数
         var days = Math.floor(distance / (24 * 3600 * 1000));
